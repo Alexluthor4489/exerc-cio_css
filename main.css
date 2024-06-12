@@ -1,0 +1,96 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+header li { /*Aqui usamos uma tecnica simples que nos possibilita estilizar o li que está dentro de header. Vale lembrar que quando temos mais de uma teg, não pode fazer desta forma, ai teria que usar a class mas como o meu código só tem um header então é possível fazer desta forma.*/
+    display: inline;/*A propriedade display configura a forma que o elemnto será exibido. Exemplos: inline, blok, flex ou none*/
+    padding-inline: 10px;
+}
+header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+header li a {
+    color: rgb(17, 59, 227);
+    text-decoration: none;/*Assim retiramos aquele traço permanente que fica embaixo de ler mais, esportes, economia e através do hover abaixo, este traço só apareçe quando passamos o mause em cima.*/
+}
+header li a:hover{
+    text-decoration: underline;/*Underline é a propriedade responsável pelo traço que aprece quando passamos o mause em ciama da palavra.*/
+}
+body{
+   
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;/*Aqui, alterei a fonte do texto de toda minha página*/
+}
+body > header { /*Aqui estamos usando o sinal maior que para dizer ao navegador que queremos estilizar o filho direto do body que no caso é o header ou seja, é o primeiro header abaixo do body e isso impede que ele estilize os demais headers que estão nas linhas inferiores.*/
+background-color: #14f517 ;
+padding: 16px 0;/*aqui estou definindo um pedding de 16 em cima, 0 na direita, 16 em baixo e 0 na esquerda.*/
+color: rgb(3, 29, 72);
+
+}
+.container {
+    width: 1366px;
+    margin: 0 auto;/*Aqui estamos definindo que a parte superior vai ter uma margem 0 o lado direito vai ter margem auto, a parte inferior vai ter margem 0 e o lado esquerdo vai ter margem auto */
+    
+}
+.articles {
+    display: flex;
+    flex-wrap: wrap;/*Esta sendo usado para que se tivermos mais uma imagem ela não embole com as demais. Ao invés disso ela cria uma nova linha para acomodar este novo elemento*/
+    justify-content: space-between;/*Cria um espaço igual entre todos os elementos*/
+}
+.articles article img {/*Aqui estamos pegando tudo que é article img dentro da class articles para estiliza-los*/
+    /*height: 180px;*/
+    width: 100%;/*Aqui usamos para definir que a imagem ocupe a mesma largura que o texto baixo.*/
+    border-radius: 5px;
+    height: 270px;
+}
+.articles article {/*Aqui estamos atribuindo uma largura de 30% para nosso article*/
+    width: 30%;
+}
+.articles article h3 {/*Aqui vamos estilizar o h3*/
+    margin-top: 10px;/*Aui estou adicionado uma margem de 10 px em cima*/
+    margin-bottom: 10px;/*Aqui estou adicionando uma fonte de 10px em baixo*/
+    color: white;
+    font-size: 22px ;
+}
+.articles article a {/*Aqui vamos estilizar o link da tag âncora. Inclusive o "a" aqui se refere a âncora lá do html.*/
+    background-color: #14f517;
+    color: rgb(3, 29, 72);;
+    padding:8px;/*Se refere a espessura da margem*/
+    display: inline-block;/*Usamos o inline-block aqui porque o nosso ler mais ao ganhar um pading de 8 px estava sobrepondo o conteúdo do loren então com isso ele foi ajustado.*/
+    text-decoration: none;
+    font-weight: bold;
+}
+.articles article a:hover {
+    text-decoration: underline;/*Underline é a propriedade responsável pelo traço que aprece quando passamos o mause em ciama da palavra.*/
+}
+
+section {
+    padding: 16px 0;
+    
+}
+section h2, .articles article {/*Aqui estamos estilizando o h2*/
+    margin-bottom: 16px;
+    color: white;
+    
+}
+
+p {
+    color: white;
+
+}
+
+#economy{
+    background:linear-gradient( to right,blue, rgb(98, 0, 128));
+}
+#sports{
+    background:linear-gradient( to right,rgb(41, 89, 247), rgb(248, 124, 8) ) ;
+}
+#technology{
+    background: linear-gradient( to right, rgb(141, 194, 141), rgb(1, 35, 1));
+}
+#entertainment{
+    background: linear-gradient( to right, rgb(224, 94, 220), rgb(112, 2, 2));
+}
